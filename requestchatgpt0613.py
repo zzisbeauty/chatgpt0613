@@ -6,8 +6,10 @@
 @Time:2023/6/26 14:41
 @Read: chatGPT0613函数调用脚本
 """
+from keys import openaikeys
+
 """
-curl https://api.openai.com/v1/chat/completions -u :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 -H 'Content-Type: application/json' -d '{
+curl https://api.openai.com/v1/chat/completions -u :{openaikeys} -H 'Content-Type: application/json' -d '{
   "model": "gpt-3.5-turbo-0613",
   "messages": [
     {"role": "user", "content": "What is the weather like in Boston?"}
@@ -66,7 +68,7 @@ return：  这意味着根据用户的输入，返回一个可以且即将被调
 # process
 #   1.用户查询物流   get function：call back 向用户索要订单的 function
 """
-curl https://api.openai.com/v1/chat/completions -u :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 -H 'Content-Type: application/json' -d '{
+curl https://api.openai.com/v1/chat/completions -u :{openaikeys} -H 'Content-Type: application/json' -d '{
   "model": "gpt-3.5-turbo-0613",
   "messages": [
     {"role": "user", "content": "请问我的订单怎么还不发货?"}
@@ -86,7 +88,6 @@ curl https://api.openai.com/v1/chat/completions -u :sk-IhfQmDFubHyUkX0DcYD3T3Blb
   ]
 }'
 """
-
 
 """
 {

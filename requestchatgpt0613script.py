@@ -8,8 +8,9 @@
 """
 import json
 import openai
+from keys import openaikeys
 
-openai.api_key = 'sk-IhfQmDFZMubHyUkX0DcYD3T3BlbkFJ4Hjq0Pd7b0HcauYGrHxJ'
+openai.api_key = openaikeys
 
 
 def get_current_weather(location='beijing', unit="fahrenheit"):
